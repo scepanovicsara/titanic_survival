@@ -1,0 +1,7 @@
+{
+    "naziv": "Random Forest",
+    "tacnost": 0.8492,
+    "preciznost": 0.8219,
+    "odziv": 0.8108,
+    "f1": 0.8163
+}

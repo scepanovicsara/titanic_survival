@@ -1,0 +1,7 @@
+{
+    "naziv": "Naive Bayes",
+    "tacnost": 0.7654,
+    "preciznost": 0.7051,
+    "odziv": 0.7432,
+    "f1": 0.7237
+}

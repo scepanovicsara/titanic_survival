@@ -123,7 +123,7 @@ print(f"Odziv (Recall):       {odziv:.4f}")
 print(f"F1-skor:              {f1:.4f}")
 
 # Sacuvaj rezultate eksperimenta
-from experiment_tracker import sacuvaj_rezultate, prikazi_rezultate
+from gluposti.experiment_tracker import sacuvaj_rezultate, prikazi_rezultate
 
 sacuvaj_rezultate("Eksperiment 1b - Baseline (bez kabine) ali 200 stabala", {
     "tacnost": tacnost,
