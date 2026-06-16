@@ -9,8 +9,15 @@ Random Forest, Decision Tree, Gradient Boosting, KNN, SVM, Logistic Regression, 
 
 ```bash
 uv sync
+uv run python src/eda.py
+uv run python src/grid_search.py
 uv run python src/train.py
 ```
+
+Preporučeni redosled pokretanja:
+1. `eda.py` - EDA analiza i grafici
+2. `grid_search.py` - optimizacija hiperparametara
+3. `train.py` - treniranje i evaluacija modela
 
 ## Struktura
 - `data/` — dataset
