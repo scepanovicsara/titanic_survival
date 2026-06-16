@@ -1,7 +1,7 @@
 {
     "naziv": "KNN",
-    "tacnost": 0.8212,
-    "preciznost": 0.7838,
-    "odziv": 0.7838,
-    "f1": 0.7838
+    "tacnost": 0.838,
+    "preciznost": 0.8082,
+    "odziv": 0.7973,
+    "f1": 0.8027
 }

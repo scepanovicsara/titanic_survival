@@ -22,7 +22,7 @@ def kreiraj_model():
     - metric: mera rastojanja (euklidsko)
     """
     model = KNeighborsClassifier(
-        n_neighbors=5,
+        n_neighbors= 7,
         metric="euclidean"
     )
     return model
