@@ -27,15 +27,7 @@ Preporučeni redosled pokretanja:
 
 ## Rezultati
 
-| Model | Tačnost | F1 |
-|---|---|---|
-| **Random Forest** | **84.92%** | **81.63%** |
-| Decision Tree | 83.80% | 80.27% |
-| Gradient Boosting | 83.80% | 80.27% |
-| Logistic Regression | 83.24% | 79.73% |
-| KNN | 82.12% | 78.38% |
-| SVM | 82.12% | 77.78% |
-| Naive Bayes | 76.54% | 72.37% |
+
 
 | Model                   | Tačnost | Preciznost | Odziv  | F1     |
 |-------------------------|---------|------------|--------|--------|
