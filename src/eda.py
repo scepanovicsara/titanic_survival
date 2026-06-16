@@ -119,4 +119,37 @@ plt.tight_layout()
 plt.savefig("results/figures/eda_korelaciona_mapa.png")
 plt.close()
 
+# =============================================================
+# 8. Prezivljavanje po tituli
+# =============================================================
+plt.figure(figsize=(8, 5))
+sns.countplot(data=df, x="Title", hue="Survived",
+              palette={0: "#e74c3c", 1: "#2ecc71"},
+              order=["Mr", "Miss", "Mrs", "Master", "Other"])
+plt.title("Preživljavanje po tituli")
+plt.xlabel("Titula")
+plt.ylabel("Broj putnika")
+plt.legend(["Nije preživeo", "Preživeo"])
+plt.tight_layout()
+plt.savefig("results/figures/eda_prezivljavanje_po_tituli.png")
+plt.close()
+
+# =============================================================
+# 9. Raspodela cene karte po prezivljavanju
+# =============================================================
+plt.figure(figsize=(8, 5))
+sns.boxplot(data=df, x="Survived", y="Fare",
+            hue="Survived",
+            palette={0: "#e74c3c", 1: "#2ecc71"},
+            legend=False)
+plt.ylim(0, 300)
+plt.title("Cena karte po preživljavanju")
+plt.xlabel("Preživeo")
+plt.xticks([0, 1], ["Nije preživeo", "Preživeo"])
+plt.ylabel("Cena karte")
+plt.tight_layout()
+plt.savefig("results/figures/eda_prezivljavanje_po_ceni_karte.png")
+plt.close()
+
+
 print("Svi EDA grafici sacuvani u results/figures/")

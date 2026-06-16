@@ -1,7 +1,7 @@
 {
     "naziv": "Gradient Boosting",
-    "tacnost": 0.838,
-    "preciznost": 0.8082,
-    "odziv": 0.7973,
-    "f1": 0.8027
+    "tacnost": 0.8436,
+    "preciznost": 0.8382,
+    "odziv": 0.7703,
+    "f1": 0.8028
 }

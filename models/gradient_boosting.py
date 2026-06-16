@@ -23,7 +23,7 @@ def kreiraj_model():
     """
     model = GradientBoostingClassifier(
         n_estimators=100,
-        learning_rate=0.1,
+        learning_rate=0.2,
         random_state=42
     )
     return model

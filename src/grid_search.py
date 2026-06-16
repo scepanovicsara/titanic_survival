@@ -38,7 +38,7 @@ konfiguracije = [
         "naziv": "Random Forest (GS)",
         "model": RandomForestClassifier(random_state=42),
         "parametri": {
-            "n_estimators": [50, 100, 200],
+            "n_estimators": [50, 100, 150, 200],
             "max_depth": [None, 5, 10],
             "min_samples_split": [2, 5]
         },
@@ -77,7 +77,7 @@ konfiguracije = [
         "naziv": "SVM (GS)",
         "model": SVC(random_state=42),
         "parametri": {
-            "C": [0.1, 1, 10],
+            "C": [0.1, 1, 10, 100],
             "kernel": ["linear", "rbf", "poly"]
         },
         "skalirano": True
