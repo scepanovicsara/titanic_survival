@@ -1,0 +1,58 @@
+[
+    {
+        "naziv": "SVM",
+        "cv_tacnost": 0.837,
+        "cv_preciznost": 0.829,
+        "cv_odziv": 0.7162,
+        "cv_f1": 0.7674,
+        "cv_f1_std": 0.0294
+    },
+    {
+        "naziv": "Logistic Regression",
+        "cv_tacnost": 0.83,
+        "cv_preciznost": 0.7924,
+        "cv_odziv": 0.7423,
+        "cv_f1": 0.7663,
+        "cv_f1_std": 0.0292
+    },
+    {
+        "naziv": "Gradient Boosting",
+        "cv_tacnost": 0.816,
+        "cv_preciznost": 0.7781,
+        "cv_odziv": 0.7164,
+        "cv_f1": 0.7456,
+        "cv_f1_std": 0.0122
+    },
+    {
+        "naziv": "KNN",
+        "cv_tacnost": 0.816,
+        "cv_preciznost": 0.7909,
+        "cv_odziv": 0.7013,
+        "cv_f1": 0.7417,
+        "cv_f1_std": 0.0281
+    },
+    {
+        "naziv": "Naive Bayes",
+        "cv_tacnost": 0.7963,
+        "cv_preciznost": 0.7224,
+        "cv_odziv": 0.7421,
+        "cv_f1": 0.7318,
+        "cv_f1_std": 0.044
+    },
+    {
+        "naziv": "Random Forest",
+        "cv_tacnost": 0.7978,
+        "cv_preciznost": 0.7387,
+        "cv_odziv": 0.7239,
+        "cv_f1": 0.7298,
+        "cv_f1_std": 0.0161
+    },
+    {
+        "naziv": "Decision Tree",
+        "cv_tacnost": 0.7935,
+        "cv_preciznost": 0.79,
+        "cv_odziv": 0.6232,
+        "cv_f1": 0.6931,
+        "cv_f1_std": 0.0293
+    }
+]

@@ -1,0 +1,16 @@
+[
+    {
+        "Skup atributa":"Svi atributi (15)",
+        "Tacnost":0.8356446371,
+        "Preciznost":0.8139225165,
+        "Odziv":0.7310971349,
+        "F1":0.7700038375
+    },
+    {
+        "Skup atributa":"Top 6 atributa",
+        "Tacnost":0.811730523,
+        "Preciznost":0.8131236619,
+        "Odziv":0.6531097135,
+        "F1":0.7222246739
+    }
+]
