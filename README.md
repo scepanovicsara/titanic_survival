@@ -2,45 +2,57 @@
 
 Predmetni projekat — SAUS, Fakultet tehničkih nauka, Novi Sad
 
-Binarna klasifikacija preživljavanja putnika Titanika korišćenjem 7 ML modela:
-Random Forest, Decision Tree, Gradient Boosting, KNN, SVM, Logistic Regression, Naive Bayes.
+Binarna klasifikacija preživljavanja putnika Titanika. Obuhvata preprocesiranje
+podataka, EDA, detekciju anomalija, treniranje i poređenje 7 ML modela
+(Random Forest, Decision Tree, Gradient Boosting, KNN, SVM, Logistic Regression,
+Naive Bayes), Grid Search optimizaciju hiperparametara, analizu značajnosti
+atributa i deployment kroz Streamlit aplikaciju.
+
+## Struktura
+- `data/` — dataset
+- `src/` — obrada podataka, EDA, anomalije, treniranje, feature selection, export
+- `models/` — implementacije svih modela
+- `results/` — grafici i metrike
+- `app/` — Streamlit aplikacija i izvezeni model
 
 ## Pokretanje
 
 ```bash
 uv sync
+```
+
+**Analiza podataka:**
+```bash
 uv run python src/eda.py
-uv run python src/grid_search.py
+uv run python src/anomaly_detection.py
+```
+
+**Treniranje, Grid Search i evaluacija svih modela:**
+```bash
 uv run python src/train.py
 ```
 
-Preporučeni redosled pokretanja:
-1. `eda.py` - EDA analiza i grafici
-2. `grid_search.py` - optimizacija hiperparametara
-3. `train.py` - treniranje i evaluacija modela
+**Analiza značajnosti atributa:**
+```bash
+uv run python src/feature_selection.py
+```
 
-## Struktura
-- `data/` — dataset
-- `src/` — obrada podataka, treniranje, evaluacija
-- `models/` — implementacije modela
-- `results/` — grafici i metrike
+**Deployment — export modela i pokretanje UI aplikacije:**
+```bash
+uv run python src/export_model.py
+uv run streamlit run app/streamlit_app.py
+```
 
-## Rezultati
+## Metodologija
 
+Modeli su upoređeni pomoću Grid Search-a sa 5-fold cross-validacijom na
+trening skupu. Test skup je korišćen samo jednom, za finalnu procenu već
+izabranog najboljeg modela.
 
+## Finalni rezultat
 
-| Model                   | Tačnost | Preciznost | Odziv  | F1     |
-|-------------------------|---------|------------|--------|--------|
-| **Random Forest**           | **84.92%**  | **82.19%**     | **81.08%** | **81.63%** |
-| Gradient Boosting (GS)  | 84.92%  | 83.10%     | 79.73% | 81.38% |
-| Gradient Boosting       | 84.36%  | 83.82%     | 77.03% | 80.28% |
-| Decision Tree           | 83.80%  | 80.82%     | 79.73% | 80.27% |
-| KNN                     | 83.80%  | 80.82%     | 79.73% | 80.27% |
-| Logistic Regression     | 83.24%  | 79.73%     | 79.73% | 79.73% |
-| Logistic Regression (GS)| 82.68%  | 79.45%     | 78.38% | 78.91% |
-| Random Forest (GS)      | 82.68%  | 81.16%     | 75.68% | 78.32% |
-| KNN (GS)                | 82.12%  | 78.38%     | 78.38% | 78.38% |
-| SVM                     | 82.12%  | 80.00%     | 75.68% | 77.78% |
-| SVM (GS)                | 82.12%  | 80.00%     | 75.68% | 77.78% |
-| Decision Tree (GS)      | 81.56%  | 80.60%     | 72.97% | 76.60% |
-| Naive Bayes             | 76.54%  | 70.51%     | 74.32% | 72.37% |
+| Model | Tačnost | Preciznost | Odziv | F1-skor |
+|---|---|---|---|---|
+| **Random Forest** (max_depth=5, n_estimators=100) | **82.68%** | 81.16% | 75.68% | **78.32%** |
+
+Najvažniji atributi za predikciju: pol, titula, cena karte, klasa karte i starost.
