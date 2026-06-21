@@ -1,6 +1,6 @@
 # Titanic Survival Classification
 
-Predmetni projekat — SAUS, Fakultet tehničkih nauka, Novi Sad
+Predmetni projekat — SAUSAU, FTN, Novi Sad
 
 Binarna klasifikacija preživljavanja putnika Titanika. Obuhvata preprocesiranje
 podataka, EDA, detekciju anomalija, treniranje i poređenje 7 ML modela
@@ -9,11 +9,23 @@ Naive Bayes), Grid Search optimizaciju hiperparametara, analizu značajnosti
 atributa i deployment kroz Streamlit aplikaciju.
 
 ## Struktura
+
 - `data/` — dataset
-- `src/` — obrada podataka, EDA, anomalije, treniranje, feature selection, export
-- `models/` — implementacije svih modela
+- `src/`
+  - `data_preparation.py` — učitavanje i preprocesiranje podataka (funkcija `pripremi_podatke()`, koriste je `train.py` i `feature_selection.py`)
+  - `eda.py` — eksplorativna analiza podataka
+  - `anomaly_detection.py` — detekcija anomalija (IQR, Isolation Forest)
+  - `evaluate.py` — funkcije za evaluaciju modela (metrike, matrica konfuzije, feature importance), koristi je `train.py`
+  - `train.py` — Grid Search, 5-fold cross-validacija, treniranje i finalna evaluacija na test skupu
+  - `feature_selection.py` — analiza značajnosti atributa i poređenje svi vs top atributi
+  - `export_model.py` — export finalnog modela
+- `models/` — izvezeni (sačuvani) finalni model
 - `results/` — grafici i metrike
-- `app/` — Streamlit aplikacija i izvezeni model
+- `app/` — Streamlit aplikacija
+
+> Napomena: `data_preparation.py` i `evaluate.py` se ne pokreću direktno — to su
+> moduli čije funkcije importuju i koriste ostali skriptovi (`train.py`,
+> `feature_selection.py`).
 
 ## Pokretanje
 
