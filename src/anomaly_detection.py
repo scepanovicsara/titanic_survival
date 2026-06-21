@@ -80,14 +80,4 @@ print(df[df["Anomaly"] == -1][["Name", "Age", "Fare", "Pclass", "SibSp", "Parch"
 print("\n" + "="*50)
 print("ODLUKA")
 print("="*50)
-print("""
-Anomalije se NE uklanjaju iz dataseta.
-
-Razlog: Ekstremne vrednosti u koloni Fare najcesce odgovaraju
-putnicima prve klase visokog imovnog stanja (npr. cele porodice
-koje su kupile vise skupih karata odjednom), sto je stvaran i
-koristan signal za predikciju prezivljavanja, a ne greska u
-podacima. Uklanjanje ovih putnika bi smanjilo dataset i moglo
-bi da ukloni bas one primere koji najjasnije pokazuju vezu
-izmedju imovnog stanja/klase i prezivljavanja.
-""")
+print("Anomalije se NE uklanjaju iz dataseta.")
